@@ -1,0 +1,529 @@
+:root {
+  --col1: rgb(197, 137, 64);
+  --col2: rgb(229, 186, 115);
+  --col3: rgb(240, 215, 124);
+  --col4: #faf8f1;
+  --bg: rgb(250, 249, 246);
+  --txtcol: #2b2b2b;
+  --txtcol2: #999999;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--txtcol);
+  font-size: 1.2rem;
+  scroll-behavior: smooth;
+  min-height: 700vh;
+  max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 8%;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg);
+  z-index: 1;
+}
+
+.navbar .navbar-logo {
+  font-family: "Archivo", sans-serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--txtcol);
+  margin-right: -10rem;
+  width: max-content;
+  transform: scaleX(1);
+  transition: 0.6s ease-in-out;
+}
+
+.navbar .navbar-logo:hover {
+  color: var(--col1);
+  transform: scaleX(1);
+  transition: 0.6s ease-in-out;
+}
+.navbar .navbar-nav a {
+  position: relative;
+  color: var(--txtcol2);
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.03rem;
+  margin: 0 1rem;
+  transition: 0.6s;
+  transform: scaleX(1);
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--col1);
+  transition: 0.4s ease-in-out;
+  transform: scaleX(1);
+}
+
+.navbar .navbar-nav a.active {
+  color: var(--col1);
+}
+
+.navbar .navbar-icon a {
+  color: var(--txtcol);
+  transition: 0.2s ease-in-out;
+}
+
+.navbar .navbar-icon a:hover {
+  color: var(--col2);
+  transition: 0.2s ease-in-out;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* End of Navbar */
+
+/* Hero Section */
+.hero .hero-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+.hero .hero-content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(250, 249, 246, 1) 5%,
+    rgba(250, 249, 246, 0) 35%
+  );
+}
+
+.hero .hero-content .hero-bg {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 23px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero .hero-content .hero-bg .hero-text {
+  background-color: var(--bg);
+  padding: 2rem 4rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .hero-content .hero-text h1 {
+  position: inherit;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.hero .hero-content .hero-text p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--txtcol2);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.hero .hero-content .hero-text .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--col1);
+  color: var(--bg);
+  font-weight: 600;
+  border-radius: 9px;
+}
+.jj {
+  margin-top: 4rem;
+  position: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 1rem;
+}
+.jj .section-title {
+  position: flex;
+  display: flex;
+  align-items: center;
+  top: 0;
+  font-size: 3.7rem;
+  font-family: "Archivo", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--txtcol);
+  text-align: center;
+  max-width: 100%;
+  width: 80%;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex: auto;
+}
+.jj p {
+  position: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--txtcol2);
+  text-align: center;
+  max-width: 100%;
+  width: 80%;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+.jj .jj-end {
+  position: flex;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  max-width: 100%;
+  width: 80%;
+  justify-content: center;
+  border-bottom: 0.3px solid var(--txtcol2);
+}
+/* End of Hero Section */
+/* Product Section */
+.home-product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  width: 80%;
+  margin: auto;
+}
+.product-title {
+  margin-top: 5.5rem;
+}
+.product-title .p-text {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans" sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 2.7px;
+  text-decoration-color: transparent;
+  color: var(--txtcol);
+  transition: 0.1s;
+}
+.product-title .p-text:hover {
+  text-decoration-color: var(--txtcol);
+  transition: 0.1s;
+}
+/* --- Container Utama --- */
+.container {
+  max-width: 100%; /* Sesuaikan lebar maksimum */
+  justify-content: left;
+  margin-top: 2rem;
+  overflow-y: scroll;
+  height: 765px;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+/* --- Bagian Galeri Gambar --- */
+.gallery {
+  display: flex; /* Aktifkan Flexbox untuk menata gambar horizontal */
+  gap: 10px;
+  max-width: 100%; /* Jarak antar gambar */
+  margin-bottom: 10px; /* Jarak antara galeri dan konten teks */
+}
+
+.image-box {
+  /* Setiap kotak gambar harus memiliki lebar yang sama */
+  flex: 1;
+  /* Pastikan gambar mengisi kotak tanpa distorsi, dan sembunyikan overflow */
+  overflow: hidden;
+  height: 310px; /* Atur tinggi kotak gambar */
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+.image-box img:hover {
+  transform: scale(1.05);
+}
+/* Text Image*/
+.text-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 1rem;
+}
+
+.left-text {
+  text-align: left;
+  flex: 1;
+  text-wrap: nowrap;
+}
+
+.right-text {
+  right: 0;
+  text-wrap: balance;
+  padding-top: 1px;
+  text-align: right;
+}
+
+.left-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.left-text .subtitle {
+  font-size: 14px;
+  flex: none;
+  color: var(--txtcol2);
+  margin-top: 1px;
+}
+
+.right-text p {
+  font-size: 16px;
+  align-items: right;
+  font-family: "Plus Jakarta Sans" sans-serif;
+  line-height: 1.3;
+  color: var(--txtcol);
+  margin: 0;
+}
+.product-title .discover-more .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  background-color: var(--col1);
+  color: var(--bg);
+  font-weight: 600;
+  border-radius: 9px;
+}
+/* End of Natural Stone Product */
+/* Why us */
+.whyus {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.whyus-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 23px;
+  min-height: 70vh;
+  max-width: 100%;
+  width: 80%;
+}
+.whyus-bg h2 {
+  position: absolute;
+  top: 0;
+  margin: 2rem 3rem;
+  padding: 1rem;
+  font-size: 3.4rem;
+  font-family: "Plus Jakarta Sans" sans-serif;
+  font-weight: 600;
+  color: var(--bg);
+}
+.whyus-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
+  border-radius: 23px;
+  background: linear-gradient(
+    -45deg,
+    rgb(250, 249, 246),
+    rgb(190, 146, 25),
+    rgb(250, 249, 246)
+  );
+  background-size: 250% 250%;
+  animation: gradient 9s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.text-whyus {
+  position: relative;
+  margin-top: 4rem;
+  max-width: 100%;
+  width: 60%;
+}
+.text-whyus h1 {
+  background-color: var(--bg);
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 7px;
+  width: 100%;
+  font-family: "Plus Jakarta Sans" sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: 0.1s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.text-whyus h1:hover {
+  text-decoration-color: var(--txtcol);
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.1s;
+}
+/* End of Why us*/
+/* Footer */
+.footer {
+  position: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--txtcol2);
+  background-size: cover;
+  min-height: 40vh;
+  min-width: cover;
+  bottom: 0;
+  padding: 0 2rem;
+}
+.footer .footer-credit {
+  text-align: left;
+}
+/* End of Footer*/
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 1020px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: block;
+  }
+  #search {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar .navbar-nav {
+    display: none;
+  }
+  .navbar .navbar-nav a {
+    font-size: xx-large;
+  }
+  .navbar .navbar-logo {
+    margin: auto;
+    font-size: x-large;
+  }
+  .hero .hero-content .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .jj {
+    display: flex;
+    margin: auto;
+    width: 95%;
+  }
+  .jj p {
+    width: 95%;
+  }
+  .jj-end {
+    width: 95%;
+  }
+  .home-product {
+    width: 95%;
+  }
+  .product-title .p-text {
+    text-decoration-thickness: 1.8px;
+  }
+  .container {
+    height: 745px;
+  }
+  .gallery {
+    gap: 3px;
+    margin-bottom: 0.5rem;
+  }
+  .left-text h2 {
+    justify-content: center;
+  }
+  .right-text p {
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .whyus-bg {
+    min-height: 40vh;
+    width: 95%;
+  }
+  .whyus h2 {
+    margin: 1rem;
+  }
+  .text-whyus {
+    width: 80%;
+  }
+  .text-whyus h1 {
+    font-size: 1.4rem;
+    text-decoration-thickness: 1px;
+  }
+  .text-whyus h1:hover {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
